@@ -27,9 +27,6 @@ class MainActivity : AppCompatActivity() {
         binding.get.setOnClickListener {
             userInfo.getData()
         }
-        userInfo.getDataLiveData.observe(this) {
-            binding.user.text = it?.toString()
-        }
         userInfo.updateDataLiveData.observe(this) {
             binding.userUpdate.text = it?.toString()
         }
